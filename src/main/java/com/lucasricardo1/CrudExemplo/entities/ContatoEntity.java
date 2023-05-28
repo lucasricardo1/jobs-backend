@@ -1,4 +1,4 @@
-package entities;
+package com.lucasricardo1.CrudExemplo.entities;
 
 import lombok.Data;
 

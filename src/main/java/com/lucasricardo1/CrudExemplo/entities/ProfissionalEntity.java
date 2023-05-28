@@ -1,6 +1,6 @@
-package entities;
+package com.lucasricardo1.CrudExemplo.entities;
 
-import enums.Cargo;
+import com.lucasricardo1.CrudExemplo.enums.Cargo;
 
 import javax.persistence.*;
 import java.time.LocalDate;
