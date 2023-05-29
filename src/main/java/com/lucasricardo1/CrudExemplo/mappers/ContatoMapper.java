@@ -6,6 +6,8 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
+import java.util.List;
+
 @Mapper
 public interface ContatoMapper {
     ContatoMapper INSTANCE = Mappers.getMapper(ContatoMapper.class);
@@ -13,5 +15,10 @@ public interface ContatoMapper {
     @Mapping(target = "profissional", ignore = true)
     ContatoEntity toEntity(ContatoDTO dto);
 
+    @Mapping(target = "profissional", ignore = true)
+    List<ContatoEntity> toEntities(List<ContatoDTO> dtos);
+
     ContatoDTO toDto(ContatoEntity entity);
+
+
 }
