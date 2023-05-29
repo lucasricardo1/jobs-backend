@@ -12,5 +12,6 @@ public class ContatoDTO {
     private Long id;
     private String nome;
     private String contato;
+    private Long profissionalId;
 
 }
