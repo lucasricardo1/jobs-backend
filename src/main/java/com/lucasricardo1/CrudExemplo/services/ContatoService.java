@@ -5,22 +5,21 @@ import com.lucasricardo1.CrudExemplo.entities.ContatoEntity;
 import com.lucasricardo1.CrudExemplo.mappers.ContatoMapper;
 import com.lucasricardo1.CrudExemplo.repositories.ContatoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ContatoService {
 
     @Autowired
     ContatoRepository contatoRepository;
 
-    @Autowired
-    ContatoMapper contatoMapper;
-
-     ContatoEntity saveContact(ContatoDTO contatoDTO){
+     public ContatoEntity saveContact(ContatoDTO contatoDTO){
          return contatoRepository.save(ContatoMapper.INSTANCE.toEntity(contatoDTO));
      }
 
-    List<ContatoEntity> saveContacts(List<ContatoDTO> contatos){
+     public List<ContatoEntity> saveContacts(List<ContatoDTO> contatos){
         return contatoRepository.saveAll(ContatoMapper.INSTANCE.toEntities(contatos));
     }
 }

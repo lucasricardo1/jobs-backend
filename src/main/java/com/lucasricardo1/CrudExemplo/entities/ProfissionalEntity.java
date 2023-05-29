@@ -4,10 +4,9 @@ import com.lucasricardo1.CrudExemplo.enums.Cargo;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.List;
 
 @Entity
-@Table(name = "Profissional")
+@Table(name = "profissional")
 public class ProfissionalEntity {
 
     @Id
@@ -23,7 +22,5 @@ public class ProfissionalEntity {
 
     private LocalDate createData;
 
-    @OneToMany(mappedBy = "profissionalEntity", cascade = CascadeType.ALL)
-    private List<ContatoEntity> contatos;
 
 }

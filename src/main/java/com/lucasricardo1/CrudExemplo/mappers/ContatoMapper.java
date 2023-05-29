@@ -12,10 +12,10 @@ import java.util.List;
 public interface ContatoMapper {
     ContatoMapper INSTANCE = Mappers.getMapper(ContatoMapper.class);
 
-    @Mapping(target = "profissional", ignore = true)
+    @Mapping(target = "profissionalEntity", ignore = true)
     ContatoEntity toEntity(ContatoDTO dto);
 
-    @Mapping(target = "profissional", ignore = true)
+    @Mapping(target = "profissionalEntity", ignore = true)
     List<ContatoEntity> toEntities(List<ContatoDTO> dtos);
 
     ContatoDTO toDto(ContatoEntity entity);
