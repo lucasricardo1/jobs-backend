@@ -22,8 +22,7 @@ public class ProfissionalController {
 
 
     @GetMapping
-    public ResponseEntity<List<ProfissionalDTO>> getProfissionais(@RequestParam(required = false) String q,
-                                                  @RequestParam(required = false) List<String> fields) {
+    public ResponseEntity<List<ProfissionalDTO>> getProfissionais(@RequestParam String q) {
         return ResponseEntity.ok(ProfissionalMapper.INSTANCE.toDtos(profissionalService.buscarProfissional(q)));
 
     }

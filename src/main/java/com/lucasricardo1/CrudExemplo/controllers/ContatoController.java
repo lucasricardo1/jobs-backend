@@ -21,7 +21,7 @@ public class ContatoController {
 
 
     @GetMapping
-    public ResponseEntity<List<ContatoDTO>> getContatos(@RequestParam(required = false) String q) {
+    public ResponseEntity<List<ContatoDTO>> getContatos(@RequestParam String q) {
         return ResponseEntity.ok(ContatoMapper.INSTANCE.toDtos(contatoService.buscarContatos(q)));
     }
 
