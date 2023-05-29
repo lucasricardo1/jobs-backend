@@ -1,12 +1,16 @@
 package com.lucasricardo1.CrudExemplo.entities;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "contato")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ContatoEntity {
 
     @Id
